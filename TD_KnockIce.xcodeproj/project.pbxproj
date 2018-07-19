@@ -17,6 +17,17 @@
 		0401EB2F21005F5000CD9B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401EB2D21005F5000CD9B9B /* LaunchScreen.storyboard */; };
 		0401EB3A21005F5000CD9B9B /* TD_KnockIceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB3921005F5000CD9B9B /* TD_KnockIceTests.swift */; };
 		0401EB4521005F5000CD9B9B /* TD_KnockIceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB4421005F5000CD9B9B /* TD_KnockIceUITests.swift */; };
+		0401EB6921005F9D00CD9B9B /* Guard_1.text in Resources */ = {isa = PBXBuildFile; fileRef = 0401EB5721005F9D00CD9B9B /* Guard_1.text */; };
+		0401EB6A21005F9D00CD9B9B /* Guard_2.text in Resources */ = {isa = PBXBuildFile; fileRef = 0401EB5821005F9D00CD9B9B /* Guard_2.text */; };
+		0401EB6B21005F9D00CD9B9B /* Scene_1.text in Resources */ = {isa = PBXBuildFile; fileRef = 0401EB5A21005F9D00CD9B9B /* Scene_1.text */; };
+		0401EB6C21005F9D00CD9B9B /* Monster_2.text in Resources */ = {isa = PBXBuildFile; fileRef = 0401EB5C21005F9D00CD9B9B /* Monster_2.text */; };
+		0401EB6D21005F9D00CD9B9B /* Monster_1.text in Resources */ = {isa = PBXBuildFile; fileRef = 0401EB5D21005F9D00CD9B9B /* Monster_1.text */; };
+		0401EB6E21005F9D00CD9B9B /* TD_SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB6121005F9D00CD9B9B /* TD_SpaceView.swift */; };
+		0401EB6F21005F9D00CD9B9B /* TD_MonsterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB6321005F9D00CD9B9B /* TD_MonsterSprite.swift */; };
+		0401EB7021005F9D00CD9B9B /* TD_ProtagonistSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB6421005F9D00CD9B9B /* TD_ProtagonistSprite.swift */; };
+		0401EB7121005F9D00CD9B9B /* TD_BlockSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB6521005F9D00CD9B9B /* TD_BlockSprite.swift */; };
+		0401EB7221005F9D00CD9B9B /* TD_GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB6821005F9D00CD9B9B /* TD_GameScene.swift */; };
+		0401EB7421005FBC00CD9B9B /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB7321005FBC00CD9B9B /* PrefixHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +64,17 @@
 		0401EB4021005F5000CD9B9B /* TD_KnockIceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TD_KnockIceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0401EB4421005F5000CD9B9B /* TD_KnockIceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_KnockIceUITests.swift; sourceTree = "<group>"; };
 		0401EB4621005F5000CD9B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0401EB5721005F9D00CD9B9B /* Guard_1.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Guard_1.text; sourceTree = "<group>"; };
+		0401EB5821005F9D00CD9B9B /* Guard_2.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Guard_2.text; sourceTree = "<group>"; };
+		0401EB5A21005F9D00CD9B9B /* Scene_1.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Scene_1.text; sourceTree = "<group>"; };
+		0401EB5C21005F9D00CD9B9B /* Monster_2.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Monster_2.text; sourceTree = "<group>"; };
+		0401EB5D21005F9D00CD9B9B /* Monster_1.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Monster_1.text; sourceTree = "<group>"; };
+		0401EB6121005F9D00CD9B9B /* TD_SpaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_SpaceView.swift; sourceTree = "<group>"; };
+		0401EB6321005F9D00CD9B9B /* TD_MonsterSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_MonsterSprite.swift; sourceTree = "<group>"; };
+		0401EB6421005F9D00CD9B9B /* TD_ProtagonistSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_ProtagonistSprite.swift; sourceTree = "<group>"; };
+		0401EB6521005F9D00CD9B9B /* TD_BlockSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_BlockSprite.swift; sourceTree = "<group>"; };
+		0401EB6821005F9D00CD9B9B /* TD_GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_GameScene.swift; sourceTree = "<group>"; };
+		0401EB7321005FBC00CD9B9B /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +125,7 @@
 		0401EB1D21005F4E00CD9B9B /* TD_KnockIce */ = {
 			isa = PBXGroup;
 			children = (
+				0401EB5221005F9D00CD9B9B /* Classes */,
 				0401EB1E21005F4E00CD9B9B /* AppDelegate.swift */,
 				0401EB2021005F4E00CD9B9B /* GameScene.sks */,
 				0401EB2221005F4E00CD9B9B /* Actions.sks */,
@@ -112,6 +135,7 @@
 				0401EB2B21005F5000CD9B9B /* Assets.xcassets */,
 				0401EB2D21005F5000CD9B9B /* LaunchScreen.storyboard */,
 				0401EB3021005F5000CD9B9B /* Info.plist */,
+				0401EB7321005FBC00CD9B9B /* PrefixHeader.swift */,
 			);
 			path = TD_KnockIce;
 			sourceTree = "<group>";
@@ -132,6 +156,119 @@
 				0401EB4621005F5000CD9B9B /* Info.plist */,
 			);
 			path = TD_KnockIceUITests;
+			sourceTree = "<group>";
+		};
+		0401EB5221005F9D00CD9B9B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB5321005F9D00CD9B9B /* Resources */,
+				0401EB5E21005F9D00CD9B9B /* Controller */,
+				0401EB5F21005F9D00CD9B9B /* Model */,
+				0401EB6021005F9D00CD9B9B /* View */,
+				0401EB6221005F9D00CD9B9B /* Sprite */,
+				0401EB6621005F9D00CD9B9B /* Lib */,
+				0401EB6721005F9D00CD9B9B /* Scene */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0401EB5321005F9D00CD9B9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB5421005F9D00CD9B9B /* img */,
+				0401EB5521005F9D00CD9B9B /* text */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0401EB5421005F9D00CD9B9B /* img */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		0401EB5521005F9D00CD9B9B /* text */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB5621005F9D00CD9B9B /* Guard */,
+				0401EB5921005F9D00CD9B9B /* Scene */,
+				0401EB5B21005F9D00CD9B9B /* Monster */,
+			);
+			path = text;
+			sourceTree = "<group>";
+		};
+		0401EB5621005F9D00CD9B9B /* Guard */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB5721005F9D00CD9B9B /* Guard_1.text */,
+				0401EB5821005F9D00CD9B9B /* Guard_2.text */,
+			);
+			path = Guard;
+			sourceTree = "<group>";
+		};
+		0401EB5921005F9D00CD9B9B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB5A21005F9D00CD9B9B /* Scene_1.text */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		0401EB5B21005F9D00CD9B9B /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB5C21005F9D00CD9B9B /* Monster_2.text */,
+				0401EB5D21005F9D00CD9B9B /* Monster_1.text */,
+			);
+			path = Monster;
+			sourceTree = "<group>";
+		};
+		0401EB5E21005F9D00CD9B9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0401EB5F21005F9D00CD9B9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0401EB6021005F9D00CD9B9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB6121005F9D00CD9B9B /* TD_SpaceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0401EB6221005F9D00CD9B9B /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB6321005F9D00CD9B9B /* TD_MonsterSprite.swift */,
+				0401EB6421005F9D00CD9B9B /* TD_ProtagonistSprite.swift */,
+				0401EB6521005F9D00CD9B9B /* TD_BlockSprite.swift */,
+			);
+			path = Sprite;
+			sourceTree = "<group>";
+		};
+		0401EB6621005F9D00CD9B9B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		0401EB6721005F9D00CD9B9B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0401EB6821005F9D00CD9B9B /* TD_GameScene.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +379,12 @@
 				0401EB2121005F4E00CD9B9B /* GameScene.sks in Resources */,
 				0401EB2C21005F5000CD9B9B /* Assets.xcassets in Resources */,
 				0401EB2F21005F5000CD9B9B /* LaunchScreen.storyboard in Resources */,
+				0401EB6921005F9D00CD9B9B /* Guard_1.text in Resources */,
+				0401EB6B21005F9D00CD9B9B /* Scene_1.text in Resources */,
+				0401EB6A21005F9D00CD9B9B /* Guard_2.text in Resources */,
+				0401EB6C21005F9D00CD9B9B /* Monster_2.text in Resources */,
 				0401EB2321005F4E00CD9B9B /* Actions.sks in Resources */,
+				0401EB6D21005F9D00CD9B9B /* Monster_1.text in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +411,13 @@
 			files = (
 				0401EB2521005F4E00CD9B9B /* GameScene.swift in Sources */,
 				0401EB2721005F4E00CD9B9B /* GameViewController.swift in Sources */,
+				0401EB6F21005F9D00CD9B9B /* TD_MonsterSprite.swift in Sources */,
+				0401EB7021005F9D00CD9B9B /* TD_ProtagonistSprite.swift in Sources */,
+				0401EB7221005F9D00CD9B9B /* TD_GameScene.swift in Sources */,
 				0401EB1F21005F4E00CD9B9B /* AppDelegate.swift in Sources */,
+				0401EB7421005FBC00CD9B9B /* PrefixHeader.swift in Sources */,
+				0401EB6E21005F9D00CD9B9B /* TD_SpaceView.swift in Sources */,
+				0401EB7121005F9D00CD9B9B /* TD_BlockSprite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
