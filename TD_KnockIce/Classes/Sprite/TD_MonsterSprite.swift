@@ -22,23 +22,32 @@ class TD_MonsterSprite: SKSpriteNode {
         }
     }
     func move(_ isLeftMove:Bool){
-        
+
         if isLeftMove{
-            let actionMove = SKAction.moveTo(x: TD_ScreenW, duration: 5)
-            
-//            removeAction
-            self.run(actionMove) {
-                self.move(false)
-            }
+            let impulse =  CGVector(dx: 2, dy: 0)//向右移动
+            self.physicsBody?.applyImpulse(impulse)
+            self.physicsBody?.affectedByGravity = true
+//            let actionMove = SKAction.moveTo(x: TD_ScreenW, duration: 5)
+//
+//            self.run(actionMove) {
+//                self.move(false)
+//            }
         }else{
             let actionMove = SKAction.moveTo(x: 0, duration: 5)
-            
+
             self.run(actionMove) {
-                self.move(true)
+//                self.move(true)
+                let impulse =  CGVector(dx: -2, dy: 0)//向左移动
+                self.physicsBody?.applyImpulse(impulse)
+                self.physicsBody?.affectedByGravity = true
             }
         }
     }
 
+    func getMonsterWithBlockIndex(){
+        
+    }
+    
 }
 
 

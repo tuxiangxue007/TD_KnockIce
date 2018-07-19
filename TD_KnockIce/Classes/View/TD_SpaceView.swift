@@ -11,9 +11,12 @@ import SpriteKit
 class TD_SpaceView: SKNode {
     var iSpace:Int!
     var iHeight:Int!
-    var blockArr=[TD_BlockSprite]()
+//    var blockArr=[TD_BlockSprite]()
+    var blockDict = [Int:TD_BlockSprite]()
     
     func creatSpace(){
+
+
         let iSpaceLab = SKLabelNode(text: String( iSpace))
         iSpaceLab.position = CGPoint.init(x: 20, y: 40)
         iSpaceLab.fontColor = UIColor.white
@@ -75,7 +78,8 @@ class TD_SpaceView: SKNode {
                     blockSprite.size = CGSize.init(width: TD_BlockH, height: TD_BlockH)
                     
                     addChild(blockSprite)
-                    blockArr.append(blockSprite)
+//                    blockArr.append(blockSprite)
+                    blockDict[100 + num] = blockSprite
                 }
             }
             else{
@@ -89,7 +93,8 @@ class TD_SpaceView: SKNode {
                     blockSprite.position = CGPoint.init(x: x + CGFloat(TD_BlockW_PT / 2.0), y: y +  y + CGFloat(TD_BlockH / 2))
                     blockSprite.size = CGSize.init(width: TD_BlockW_PT, height: TD_BlockH)
                     addChild(blockSprite)
-                    blockArr.append(blockSprite)
+//                    blockArr.append(blockSprite)
+                    blockDict[100 + num] = blockSprite
                 }else{
                     let arc = arc4random() % 3
                     if(arc == 1){
@@ -102,7 +107,8 @@ class TD_SpaceView: SKNode {
                         blockSprite.position = CGPoint.init(x: x + CGFloat(TD_BlockW_PT / 2.0), y: y + CGFloat(TD_BlockH / 2))
                         blockSprite.size = CGSize.init(width: TD_BlockW_PT, height: TD_BlockH)
                         addChild(blockSprite)
-                        blockArr.append(blockSprite)
+//                        blockArr.append(blockSprite)
+                        blockDict[200 + num] = blockSprite
                     }else if (arc == 2){
                         blockSprite = TD_BlockSprite(imageNamed: "block_2")
                         blockSprite.iSpaceHeight = iHeight
@@ -113,21 +119,27 @@ class TD_SpaceView: SKNode {
                         blockSprite.position = CGPoint.init(x: x + CGFloat(TD_BlockW_PT / 2.0), y: y + CGFloat(TD_BlockH / 2 + TD_BlockH / 4))
                         blockSprite.size = CGSize.init(width: TD_BlockW_PT, height: TD_BlockH / 2)
                         addChild(blockSprite)
-                        blockArr.append(blockSprite)
+//                        blockArr.append(blockSprite)
+                        blockDict[200 + num] = blockSprite
                     }
                 }
             }
         }
     }
     func impact(blockPosition:CGPoint){
-        for i in 0..<blockArr.count {
-            let block = blockArr[i]
+        for dic in blockDict {
+            let key = dic.key
+            let block = dic.value
+//        }
+//        for i in 0..<blockArr.count {
+//            let block = blockArr[i]
             if Int(block.position.x) == Int(blockPosition.x) && Int(block.position.y) == Int(blockPosition.y){
 //                NSLog("impact block:%@",block)
                 if block.blockType == 1{//撞击到完整的砖块
 //                    let bPosition = CGPoint.init(x:  block.position.x, y: block.position.y + block.size.height / 4)
                     removeChildren(in: [block])
-                    blockArr.remove(at: i)
+//                    blockArr.remove(at: i)
+                    blockDict.removeValue(forKey: key)
 //                    NSLog("remove block:%@",block)
 
 //                    addChild(<#T##node: SKNode##SKNode#>)
@@ -141,7 +153,9 @@ class TD_SpaceView: SKNode {
 //                    blockArr.replaceSubrange(Range(i..<i+1), with: [block])
                 }else if block.blockType == 2{//撞击到半块的砖块
                     removeChildren(in: [block])
-                    blockArr.remove(at: i)
+//                    blockArr.remove(at: i)
+                    blockDict.removeValue(forKey: key)
+
 //                    NSLog("remove block:%@",block)
 
                 }
@@ -151,7 +165,8 @@ class TD_SpaceView: SKNode {
     }
     func moveDown() {
         iHeight = iHeight - 1
-        for block in blockArr {
+        for dic in blockDict {
+            let block = dic.value
             block.iSpaceHeight = iHeight
         }
         

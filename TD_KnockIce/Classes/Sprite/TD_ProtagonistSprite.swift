@@ -14,7 +14,7 @@ class TD_ProtagonistSprite: SKSpriteNode {
     var iBanDirection:Int?              //禁止方向  1、没有禁止 1、禁止向左 2、禁止向右
     func creatSprite() {
         
-        move()
+//        move()
     }
     func move(){
         var x = position.x
