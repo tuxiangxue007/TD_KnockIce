@@ -21,6 +21,8 @@ let TD_SeaCategory    : UInt32 = 0x1 << 2
 let TD_ProtagonistCategory : UInt32 = 0x1 << 3
 let TD_Block1Category    : UInt32 = 0x1 << 4
 let TD_Block0Category      : UInt32 = 0x1 << 5
+let TD_MonsterCategory      : UInt32 = 0x1 << 6
+
 
 struct PhysicsCategory {
     static let Crocodile: UInt32 = 1

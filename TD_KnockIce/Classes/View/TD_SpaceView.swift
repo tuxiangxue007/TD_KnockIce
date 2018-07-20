@@ -65,6 +65,8 @@ class TD_SpaceView: SKNode {
             if (num < 5 || num >= 27){
                 if (isStart){
                     blockSprite = TD_BlockSprite(imageNamed: "hard")
+                    blockSprite.iSpace = iSpace
+                    blockSprite.iTag = 100 + num
                     blockSprite.iSpaceHeight = iHeight
                     blockSprite.imageName = "hard"
                     blockSprite.blockType = 0
@@ -85,6 +87,8 @@ class TD_SpaceView: SKNode {
             else{
                 if (isStart){
                     blockSprite = TD_BlockSprite(imageNamed: "block_1")
+                    blockSprite.iSpace = iSpace
+                    blockSprite.iTag = 100 + num
                     blockSprite.iSpaceHeight = iHeight
                     blockSprite.imageName = "block_1"
                     blockSprite.blockType = 1
@@ -99,6 +103,8 @@ class TD_SpaceView: SKNode {
                     let arc = arc4random() % 3
                     if(arc == 1){
                         blockSprite = TD_BlockSprite(imageNamed: "block_1")
+                        blockSprite.iSpace = iSpace
+                        blockSprite.iTag = 200 + num
                         blockSprite.iSpaceHeight = iHeight
                         blockSprite.blockType = 1
                         blockSprite.imageName = "block_1"
@@ -111,6 +117,8 @@ class TD_SpaceView: SKNode {
                         blockDict[200 + num] = blockSprite
                     }else if (arc == 2){
                         blockSprite = TD_BlockSprite(imageNamed: "block_2")
+                        blockSprite.iSpace = iSpace
+                        blockSprite.iTag = 200 + num
                         blockSprite.iSpaceHeight = iHeight
                         blockSprite.blockType = 2
                         blockSprite.imageName = "block_2"

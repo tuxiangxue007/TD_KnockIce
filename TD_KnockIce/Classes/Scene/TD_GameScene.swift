@@ -84,7 +84,7 @@ class TD_GameScene: SKScene ,SKPhysicsContactDelegate,SKSceneDelegate{
         protagonistSprite.position = CGPoint.init(x: 150, y: 30 + TD_BlockH + TD_BlockH * 3 / 2.0 + 2)
         protagonistSprite.size = CGSize.init(width: TD_BlockW_PT, height: TD_BlockH * 3)
         protagonistSprite.zPosition = 1
-        protagonistSprite.creatSprite()
+//        protagonistSprite.creatSprite()
         highBview.addChild( protagonistSprite)
 //        addChild(protagonistSprite)
         
@@ -152,46 +152,46 @@ class TD_GameScene: SKScene ,SKPhysicsContactDelegate,SKSceneDelegate{
         seaSprite.physicsBody?.contactTestBitMask = TD_ProtagonistCategory
 //        seaSprite.zPosition = 1
         
-        protagonistSprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "protagonist"), size: protagonistSprite.size)
-        protagonistSprite.physicsBody?.categoryBitMask = TD_ProtagonistCategory
-        protagonistSprite.physicsBody?.collisionBitMask = 0
-        protagonistSprite.physicsBody?.density = 0.5
-        protagonistSprite.physicsBody?.usesPreciseCollisionDetection = true
-        protagonistSprite.physicsBody?.contactTestBitMask = TD_Block0Category | TD_Block1Category | TD_SeaCategory
-        protagonistSprite.physicsBody?.affectedByGravity = false
+//        protagonistSprite.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "protagonist"), size: protagonistSprite.size)
+//        protagonistSprite.physicsBody?.categoryBitMask = TD_ProtagonistCategory
+//        protagonistSprite.physicsBody?.collisionBitMask = 0
+//        protagonistSprite.physicsBody?.density = 0.5
+//        protagonistSprite.physicsBody?.usesPreciseCollisionDetection = true
+//        protagonistSprite.physicsBody?.contactTestBitMask = TD_Block0Category | TD_Block1Category | TD_SeaCategory
+//        protagonistSprite.physicsBody?.affectedByGravity = false
         
-        setSpaceViewBody()
+//        setSpaceViewBody()
     }
-    func setSpaceViewBody(){
-        for spaceView in spaceViewArr {
-            for dic in spaceView.blockDict{
-                let block = dic.value
-                block.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: block.imageName), size: block.size)
-                
-                var name = ""
-                if block.iSpaceHeight == 1{
-                    name = "1"
-                }else if block.iSpaceHeight == 2{
-                    name = "22"
-                }else if block.iSpaceHeight == 3{
-                    name = "333"
-                }else if block.iSpaceHeight == 4{
-                    name = "4444"
-                }
-                
-                block.physicsBody?.node?.name = name
-                block.physicsBody?.categoryBitMask = TD_Block1Category
-                block.physicsBody?.collisionBitMask = 0
-                block.physicsBody?.density = 0.5
-                
-                block.physicsBody?.affectedByGravity = false
-                block.physicsBody?.allowsRotation = false;
-                block.physicsBody?.contactTestBitMask = TD_ProtagonistCategory
-                block.zPosition = 1
-                block.physicsBody?.restitution = 0.75
-            }
-        }
-    }
+//    func setSpaceViewBody(){
+//        for spaceView in spaceViewArr {
+//            for dic in spaceView.blockDict{
+//                let block = dic.value
+//                block.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: block.imageName), size: block.size)
+//                
+//                var name = ""
+//                if block.iSpaceHeight == 1{
+//                    name = "1"
+//                }else if block.iSpaceHeight == 2{
+//                    name = "22"
+//                }else if block.iSpaceHeight == 3{
+//                    name = "333"
+//                }else if block.iSpaceHeight == 4{
+//                    name = "4444"
+//                }
+//                
+//                block.physicsBody?.node?.name = name
+//                block.physicsBody?.categoryBitMask = TD_Block1Category
+//                block.physicsBody?.collisionBitMask = 0
+//                block.physicsBody?.density = 0.5
+//                
+//                block.physicsBody?.affectedByGravity = false
+//                block.physicsBody?.allowsRotation = false;
+//                block.physicsBody?.contactTestBitMask = TD_ProtagonistCategory
+//                block.zPosition = 1
+//                block.physicsBody?.restitution = 0.75
+//            }
+//        }
+//    }
     func gameOver(){
         isStartGame = false
 //        UIAlertController.showAlert(message: "游戏结束!")
@@ -223,7 +223,7 @@ class TD_GameScene: SKScene ,SKPhysicsContactDelegate,SKSceneDelegate{
                 let name =  contact.bodyB.node?.name
                 var iH = 0
                 if name != nil{
-                    iH = (name?.characters.count)!
+                    iH = Int(name!)! / 1000
                     nodeBy = nodeBy + CGFloat(iH) * CGFloat(TD_BlockH * 6) + 30
                 }
                 
@@ -246,15 +246,21 @@ class TD_GameScene: SKScene ,SKPhysicsContactDelegate,SKSceneDelegate{
                             spaceView.moveDown()
                         }
                         spaceViewArr.removeFirst()
-                        setSpaceViewBody()
+//                        setSpaceViewBody()
                         protagonistSprite.moveDown()
                     }
                 }else if nodeAx - nodeBx >= 18{//向左运行时碰到砖块
                     NSLog("禁止向左")
-//                    protagonistSprite.iBanDirection = 1
-                }else if nodeBx - nodeAx >= 18{//向右运行时碰到砖块
+                    protagonistSprite.iBanDirection = 1
+                    let impulse =  CGVector(dx: 0, dy:(protagonistSprite.physicsBody?.velocity.dy)!)//设置一个速度
+                    protagonistSprite.physicsBody?.velocity = impulse
+                    protagonistSprite.physicsBody?.affectedByGravity = false                }else if nodeBx - nodeAx >= 18{//向右运行时碰到砖块
                     NSLog("禁止向右")
-//                    protagonistSprite.iBanDirection = 2
+                    protagonistSprite.iBanDirection = 2
+                    
+                    let impulse =  CGVector(dx: 0, dy:(protagonistSprite.physicsBody?.velocity.dy)!)//设置一个速度
+                    protagonistSprite.physicsBody?.velocity = impulse
+                    protagonistSprite.physicsBody?.affectedByGravity = false
                 }
                 
 //                if (protagonistSprite.physicsBody?.velocity.dy)! > CGFloat(0){
@@ -310,14 +316,20 @@ class TD_GameScene: SKScene ,SKPhysicsContactDelegate,SKSceneDelegate{
             }
         }else if node.name == "leftLab"{
 //            protagonistSprite.setDirection(direction: 1)
-            let impulse =  CGVector(dx: -2, dy: 0)//跳跃
-            protagonistSprite.physicsBody?.applyImpulse(impulse)
-            protagonistSprite.physicsBody?.affectedByGravity = true
+            if protagonistSprite.iBanDirection != 1{
+                let impulse =  CGVector(dx: -2, dy: 0)//向左行动
+                protagonistSprite.physicsBody?.applyImpulse(impulse)
+                protagonistSprite.physicsBody?.affectedByGravity = true
+            }
         }else if node.name == "rightLab"{
 //            protagonistSprite.setDirection(direction: 2)
-            let impulse =  CGVector(dx: 2, dy: 0)//跳跃
-            protagonistSprite.physicsBody?.applyImpulse(impulse)
-            protagonistSprite.physicsBody?.affectedByGravity = true
+            
+            if protagonistSprite.iBanDirection != 2{
+                let impulse =  CGVector(dx: 2, dy: 0)//向右行动
+                protagonistSprite.physicsBody?.applyImpulse(impulse)
+                protagonistSprite.physicsBody?.affectedByGravity = true
+            }
+            
 
         }else if node.name == "leapLab"{
             NSLog("leapLab")

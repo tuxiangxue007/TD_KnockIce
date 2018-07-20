@@ -28,6 +28,8 @@
 		0401EB7121005F9D00CD9B9B /* TD_BlockSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB6521005F9D00CD9B9B /* TD_BlockSprite.swift */; };
 		0401EB7221005F9D00CD9B9B /* TD_GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB6821005F9D00CD9B9B /* TD_GameScene.swift */; };
 		0401EB7421005FBC00CD9B9B /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB7321005FBC00CD9B9B /* PrefixHeader.swift */; };
+		0401EB832100901D00CD9B9B /* TD_IceCubeSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB822100901D00CD9B9B /* TD_IceCubeSprite.swift */; };
+		0401EB852100949800CD9B9B /* TD_PlayMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401EB842100949800CD9B9B /* TD_PlayMusic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		0401EB6521005F9D00CD9B9B /* TD_BlockSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_BlockSprite.swift; sourceTree = "<group>"; };
 		0401EB6821005F9D00CD9B9B /* TD_GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_GameScene.swift; sourceTree = "<group>"; };
 		0401EB7321005FBC00CD9B9B /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		0401EB822100901D00CD9B9B /* TD_IceCubeSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_IceCubeSprite.swift; sourceTree = "<group>"; };
+		0401EB842100949800CD9B9B /* TD_PlayMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_PlayMusic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,7 @@
 				0401EB6321005F9D00CD9B9B /* TD_MonsterSprite.swift */,
 				0401EB6421005F9D00CD9B9B /* TD_ProtagonistSprite.swift */,
 				0401EB6521005F9D00CD9B9B /* TD_BlockSprite.swift */,
+				0401EB822100901D00CD9B9B /* TD_IceCubeSprite.swift */,
 			);
 			path = Sprite;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 		0401EB6621005F9D00CD9B9B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				0401EB842100949800CD9B9B /* TD_PlayMusic.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -410,12 +416,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0401EB2521005F4E00CD9B9B /* GameScene.swift in Sources */,
+				0401EB852100949800CD9B9B /* TD_PlayMusic.swift in Sources */,
 				0401EB2721005F4E00CD9B9B /* GameViewController.swift in Sources */,
 				0401EB6F21005F9D00CD9B9B /* TD_MonsterSprite.swift in Sources */,
 				0401EB7021005F9D00CD9B9B /* TD_ProtagonistSprite.swift in Sources */,
 				0401EB7221005F9D00CD9B9B /* TD_GameScene.swift in Sources */,
 				0401EB1F21005F4E00CD9B9B /* AppDelegate.swift in Sources */,
 				0401EB7421005FBC00CD9B9B /* PrefixHeader.swift in Sources */,
+				0401EB832100901D00CD9B9B /* TD_IceCubeSprite.swift in Sources */,
 				0401EB6E21005F9D00CD9B9B /* TD_SpaceView.swift in Sources */,
 				0401EB7121005F9D00CD9B9B /* TD_BlockSprite.swift in Sources */,
 			);

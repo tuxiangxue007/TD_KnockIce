@@ -20,6 +20,8 @@ class TD_MonsterSprite: SKSpriteNode {
             print("1 秒后输出")
             self.move(self.isLeft)
         }
+        
+        setPhysicsBody()
     }
     func move(_ isLeftMove:Bool){
 
@@ -46,6 +48,28 @@ class TD_MonsterSprite: SKSpriteNode {
 
     func getMonsterWithBlockIndex(){
         
+    }
+    func setPhysicsBody(){
+//        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed:"seal"), size: self.size)
+//        self.physicsBody?.node?.name = String(iSpace * 100 + iTag)
+//        self.physicsBody?.categoryBitMask = TD_Block1Category
+//        self.physicsBody?.collisionBitMask = 0
+//        self.physicsBody?.density = 0.5
+//
+//        self.physicsBody?.affectedByGravity = false
+//        self.physicsBody?.allowsRotation = false;
+//        self.physicsBody?.contactTestBitMask = TD_ProtagonistCategory
+//        self.zPosition = 1
+//        self.physicsBody?.restitution = 0.75
+        
+        self.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "seal"), size: self.size)
+        self.physicsBody?.categoryBitMask = TD_MonsterCategory
+        self.physicsBody?.collisionBitMask = 0
+        self.physicsBody?.density = 0.5
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        self.physicsBody?.contactTestBitMask = TD_ProtagonistCategory
+        self.physicsBody?.affectedByGravity = false
+
     }
     
 }
